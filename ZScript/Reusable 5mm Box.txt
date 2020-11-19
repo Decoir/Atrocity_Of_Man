@@ -1,5 +1,30 @@
 const AOM_HDLD_5MMBOX = "5bx" ;
 
+class AOM_5MM_Ammo:HDRoundAmmo{
+	default{
+		+forcexybillboard +cannotpush
+		+inventory.ignoreskill
+		+hdpickup.multipickup
+		xscale 0.55;yscale 0.55;
+		inventory.pickupmessage "Picked up a 5mm MR round.";
+		hdpickup.refid HDLD_5MM;
+		tag "5x16mm Mini-Rifle";
+		hdpickup.bulk ENC_5MM;
+	}
+	override void SplitPickup(){
+		SplitPickupBoxableRound(16,350,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
+	}
+	override void GetItemsThatUseThis(){
+		itemsthatusethis.push("HD_M5165");
+		//itemsthatusethis.push("HD_Mk22SP");
+	}
+	states{
+	spawn:
+		5MMY A -1;
+		5MMZ A -1;
+	}
+}
+
 class AOM_AmmoBox : HDMagAmmo {
 	default {
 		HDMagAmmo.extracttime 1;
@@ -15,13 +40,15 @@ class AOM_5mmBox : AOM_AmmoBox {
 	default {
 		scale 0.4;
 		HDMagAmmo.MaxPerUnit 250;
+		HDMagAmmo.RoundType "AOM_5MM_Ammo";
+		HDMagAmmo.RoundBulk ENC_5MM_LOADED;
 		tag "Reusable 5.22mm ammo box";
 		Inventory.PickupMessage "Picked up a box of 5.22mm rounds.";
 		HDPickup.refid AOM_HDLD_5MMBOX;
 	}
 
 	override string,string,name,double getmagsprite(int thismagamt) {
-		return "5BOXA0","RBRSA3A7","FiveMilAmmo",0.6;
+		return "5BOXA0","RBRSA3A7","AOM_5MM_Ammo",0.6;
 	}
 
 	override void GetItemsThatUseThis(){
