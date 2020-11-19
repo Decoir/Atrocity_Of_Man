@@ -15,8 +15,7 @@ class AOM_5MM_Ammo:HDRoundAmmo{
 		SplitPickupBoxableRound(16,350,"PB_5mmBoxPickup","5MMYA0","5MMZA0");
 	}
 	override void GetItemsThatUseThis(){
-		itemsthatusethis.push("HD_M5165");
-		//itemsthatusethis.push("HD_Mk22SP");
+		itemsthatusethis.push("Glompson Magazine");
 	}
 	states{
 	spawn:
@@ -52,7 +51,7 @@ class AOM_5mmBox : AOM_AmmoBox {
 	}
 
 	override void GetItemsThatUseThis(){
-		itemsthatusethis.push("Glompson")
+		itemsthatusethis.push("Glompson");
 	
 	}
 
