@@ -1,4 +1,4 @@
-const HDLD_SMG = "GLO";
+const AOM_GLO = "GMP";
 
 Class HDGMP:HDWeapon{
 default{
@@ -18,7 +18,7 @@ weapon.bobspeed 1.75;
 scale 0.55;
 Inventory.PickupMessage "You've acquired the Glompson! It feels light in your hands.";
 hdweapon.barrelsize 26,0.5,1;
-hdweapon.refid HDLD_SMG;
+hdweapon.refid AOM_GLO;
 tag "Glompson";
 inventory.icon "GMPA0";
 }

@@ -1,4 +1,4 @@
-const AOM_5mm = "522";
+const AOM_5mm_Mag = "522";
 
 class AOM_5mm_Mag75:HDMagAmmo{
 	default{
@@ -8,11 +8,11 @@ class AOM_5mm_Mag75:HDMagAmmo{
 
 		hdmagammo.maxperunit 75;
 		hdmagammo.roundtype "AOM_5MM_Ammo";
-		hdmagammo.roundbulk ENC_9_LOADED;
-		hdmagammo.magbulk ENC_9MAG_EMPTY;
+		hdmagammo.roundbulk ENC_5MM_LOADED;
+		hdmagammo.magbulk ENC_M165_MAG_EMPTY;
 		tag "5mm Glompson magazine";
 		inventory.pickupmessage "Picked up a Glompson magazine.";
-		hdpickup.refid HDLD_NIMAG15;
+		hdpickup.refid AOM_5mm_Mag;
 	}
 	override string,string,name,double getmagsprite(int thismagamt){
 		string magsprite=(thismagamt>0)?"GMPA2":"GMPA2";

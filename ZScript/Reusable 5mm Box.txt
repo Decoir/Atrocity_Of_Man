@@ -52,9 +52,8 @@ class AOM_5mmBox : AOM_AmmoBox {
 	}
 
 	override void GetItemsThatUseThis(){
-		itemsthatusethis.push("LiberatorRifle");
-		itemsthatusethis.push("BossRifle");
-		itemsthatusethis.push("AutoReloader");
+		itemsthatusethis.push("Glompson")
+	
 	}
 
 	States {
