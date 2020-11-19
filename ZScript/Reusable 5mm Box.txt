@@ -1,0 +1,37 @@
+const AOM_HDLD_5MMBOX = "5bx" ;
+
+class AOM_AmmoBox : HDMagAmmo {
+	default {
+		HDMagAmmo.extracttime 1;
+		HDMagAmmo.inserttime 2;
+		HDMagAmmo.MagBulk 2;
+	}
+
+	// Don't auto-consolidate these like mags
+	override void Consolidate() { SyncAmount(); return; }
+}
+
+class AOM_5mmBox : AOM_AmmoBox {
+	default {
+		scale 0.4;
+		HDMagAmmo.MaxPerUnit 250;
+		tag "Reusable 5.22mm ammo box";
+		Inventory.PickupMessage "Picked up a box of 5.22mm rounds.";
+		HDPickup.refid AOM_HDLD_5MMBOX;
+	}
+
+	override string,string,name,double getmagsprite(int thismagamt) {
+		return "5BOXA0","RBRSA3A7","FiveMilAmmo",0.6;
+	}
+
+	override void GetItemsThatUseThis(){
+		itemsthatusethis.push("LiberatorRifle");
+		itemsthatusethis.push("BossRifle");
+		itemsthatusethis.push("AutoReloader");
+	}
+
+	States {
+		Spawn:
+			5BOX A -1;
+	}
+}
