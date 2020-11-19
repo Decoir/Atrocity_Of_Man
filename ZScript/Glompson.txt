@@ -383,7 +383,7 @@ inventory.icon "GMPA0";
 			if(invoker.weaponstatus[SMGS_MAG]<0)frame=1;
 			if(
 				invoker.weaponstatus[0]&SMGF_REFLEXSIGHT
-			)invoker.sprite=getspriteindex("SMSNA0");
+			)invoker.sprite=getspriteindex("GMPA0");
 		}
 		SMSN # -1;
 		stop;
