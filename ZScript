@@ -5,7 +5,7 @@ default{
 //$Category "Weapons/Hideous Destructor"
 //Title$ "GLO"
 //$Sprite "GLPMA0"
-//MAIN BRANCH
+//TEST BRANCH
 +hdweapon.fitsinbackpack
 obituary "%o was peppered by %k's lead.";
 weapon.selectionorder 30;
