@@ -5,7 +5,7 @@ default{
 //$Category "Weapons/Hideous Destructor"
 //Title$ "GLO"
 //$Sprite "GLPMA0"
-//TEST BRANCH
+//MAIN BRANCH
 +hdweapon.fitsinbackpack
 obituary "%o was peppered by %k's lead.";
 weapon.selectionorder 30;
@@ -19,7 +19,7 @@ scale 0.55;
 Inventory.PickupMessage "You've acquired the Glompson! Feels light in your hands.";
 hdweapon.barrelsize 26,0.5,1;
 hdweapon.refid HDLD_SMG;
-tag "GLO_test";
+tag "Glompson";
 inventory.icon "GLPMA0";
 }
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
