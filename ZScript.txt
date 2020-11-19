@@ -4,7 +4,7 @@ Class HDGMP:HDWeapon{
 default{
 //$Category "Weapons/Hideous Destructor"
 //Title$ "GLO"
-//$Sprite "GLPMA0"
+//$Sprite "GMPA0"
 //TEST BRANCH
 +hdweapon.fitsinbackpack
 obituary "%o was peppered by %k's lead.";
@@ -16,11 +16,11 @@ weapon.bobrangex 0.25;
 weapon.bobrangey 0.5;
 weapon.bobspeed 1.75;
 scale 0.55;
-Inventory.PickupMessage "You've acquired the Glompson! Feels light in your hands.";
+Inventory.PickupMessage "You've acquired the Glompson! It feels light in your hands.";
 hdweapon.barrelsize 26,0.5,1;
 hdweapon.refid HDLD_SMG;
 tag "Glompson";
-inventory.icon "GLPMA0";
+inventory.icon "GMPA0";
 }
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
