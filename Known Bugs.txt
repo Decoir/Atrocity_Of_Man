@@ -1,0 +1,9 @@
+//Glompson Mags:
+	//Mags look like batteries when dropped or are in batteries
+	//Mags are not properly prioritizing fuller mags when reloading ( Cycles through current mags, likely an issue with hdmagammo somewhere. ). 
+//5mm Reusable Box
+	//Currently has no sprite
+	//Cannot be used for anything outside of AOM
+//Glompson
+	//Currently using SMG Animations and Sprites.
+	//Current weapon statistics need tweaking.

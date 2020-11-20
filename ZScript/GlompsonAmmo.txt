@@ -1,4 +1,6 @@
 const AOM_5mm_Mag = "522";
+const ENC_GMP_EMPTY =( ENC_9MAG_EMPTY*0.5 );
+const ENC_GMP_LOADED =( ENC_9MAG_LOADED*0.5 );
 
 class AOM_5mm_Mag75:HDMagAmmo{
 	default{
@@ -8,8 +10,8 @@ class AOM_5mm_Mag75:HDMagAmmo{
 
 		hdmagammo.maxperunit 75;
 		hdmagammo.roundtype "AOM_5MM_Ammo";
-		hdmagammo.roundbulk ENC_5MM_LOADED;
-		hdmagammo.magbulk ENC_M165_MAG_EMPTY;
+		hdmagammo.roundbulk ENC_GMP_LOADED;
+		hdmagammo.magbulk ENC_GMP_EMPTY;
 		tag "5mm Glompson magazine";
 		inventory.pickupmessage "Picked up a Glompson magazine.";
 		hdpickup.refid AOM_5mm_Mag;
