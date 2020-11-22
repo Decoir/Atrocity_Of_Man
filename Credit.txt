@@ -1,0 +1,3 @@
+//Credits
+	//Archer: for providing the mag sprite as well as the glompson with mag and no mag sprites.
+	//
