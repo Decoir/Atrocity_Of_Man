@@ -4,7 +4,7 @@ Class AOM_GMP:HDWeapon{
 default{
 //$Category "Weapons/Hideous Destructor"
 //Title$ "Glompson"
-//$Sprite "GMPA0"
+//$Sprite "GMP0"
 //TEST BRANCH
 +hdweapon.fitsinbackpack
 obituary "%o was peppered by %k's lead.";
@@ -20,7 +20,7 @@ Inventory.PickupMessage "You've acquired the Glompson! It feels light in your ha
 hdweapon.barrelsize 26,0.5,1;
 hdweapon.refid AOM_Glompson;
 tag "Glompson";
-inventory.icon "GMPA0";
+inventory.icon "GMP0";
 }
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
@@ -30,7 +30,7 @@ inventory.icon "GMPA0";
 	override double weaponbulk(){
 		int mg=weaponstatus[GMPS_MAG];
 		if(mg<0)return 50;
-		else return (50+ENC_5MM_LOADED)+mg*ENC_5MM_LOADED;
+		else return (70+ENC_5MM_LOADED)+mg*ENC_5MM_LOADED;
 	}
 	override void failedpickupunload(){
 		failedpickupunloadmag(GMPS_MAG,"AOM_5mm_Mag75");
@@ -383,7 +383,7 @@ inventory.icon "GMPA0";
 			if(invoker.weaponstatus[GMPS_MAG]<0)frame=1;
 			if(
 				invoker.weaponstatus[0]&SMGF_REFLEXSIGHT
-			)invoker.sprite=getspriteindex("GMPA0");
+			)invoker.sprite=getspriteindex("GMP0");
 		}
 		SMSN # -1;
 		stop;
