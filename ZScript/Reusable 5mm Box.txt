@@ -38,7 +38,7 @@ class AOM_AmmoBox : HDMagAmmo {
 class AOM_5mmBox : AOM_AmmoBox {
 	default {
 		scale 0.4;
-		HDMagAmmo.MaxPerUnit 250;
+		HDMagAmmo.MaxPerUnit 150;
 		HDMagAmmo.RoundType "AOM_5MM_Ammo";
 		HDMagAmmo.RoundBulk ENC_5MM_LOADED;
 		tag "Reusable 5.22mm ammo box";

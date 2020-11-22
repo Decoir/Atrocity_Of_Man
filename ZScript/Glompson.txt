@@ -4,7 +4,7 @@ Class AOM_GMP:HDWeapon{
 default{
 //$Category "Weapons/Hideous Destructor"
 //Title$ "Glompson"
-//$Sprite "GMPA0"
+//$Sprite "GMP0"
 //TEST BRANCH
 +hdweapon.fitsinbackpack
 obituary "%o was peppered by %k's lead.";
@@ -20,7 +20,7 @@ Inventory.PickupMessage "You've acquired the Glompson! It feels light in your ha
 hdweapon.barrelsize 26,0.5,1;
 hdweapon.refid AOM_Glompson;
 tag "Glompson";
-inventory.icon "GMPA0";
+inventory.icon "GMP0";
 }
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
@@ -71,11 +71,11 @@ inventory.icon "GMPA0";
 		if(sb.hudlevel==1){
 			int nextmagloaded=sb.GetNextLoadMag(HDMagAmmo(hpl.findinventory("AOM_5mm_Mag75")));
 			if(nextmagloaded>=75){
-				sb.drawimage("GMPA2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,scale:(1.5,1.5));
+				sb.drawimage("GMP2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,scale:(1.5,1.5));
 			}else if(nextmagloaded<1){
-				sb.drawimage("GMPA2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,alpha:nextmagloaded?0.6:1.,scale:(1.5,1.5));
+				sb.drawimage("GMP2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,alpha:nextmagloaded?0.6:1.,scale:(1.5,1.5));
 			}else sb.drawbar(
-				"GMPA2","GMPA2",
+				"GMP2","GMP2",
 				nextmagloaded,75,
 				(-46,-3),-1,
 				sb.SHADER_VERT,sb.DI_SCREEN_CENTER_BOTTOM
@@ -383,7 +383,7 @@ inventory.icon "GMPA0";
 			if(invoker.weaponstatus[GMPS_MAG]<0)frame=1;
 			if(
 				invoker.weaponstatus[0]&SMGF_REFLEXSIGHT
-			)invoker.sprite=getspriteindex("GMPA0");
+			)invoker.sprite=getspriteindex("GMP0");
 		}
 		SMSN # -1;
 		stop;
