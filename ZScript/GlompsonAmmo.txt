@@ -1,6 +1,6 @@
 const AOM_5mm_Mag = "522";
-const ENC_GMP_EMPTY =( ENC_9MAG_EMPTY*0.5 );
-const ENC_GMP_LOADED =( ENC_9MAG_LOADED*0.5 );
+const ENC_GMP_EMPTY =( ENC_9MAG_EMPTY*0.75 );
+const ENC_GMP_LOADED =( ENC_9MAG_LOADED*0.75 );
 
 class AOM_5mm_Mag75:HDMagAmmo{
 	default{
