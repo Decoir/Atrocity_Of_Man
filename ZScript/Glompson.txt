@@ -71,11 +71,11 @@ inventory.icon "GMP0";
 		if(sb.hudlevel==1){
 			int nextmagloaded=sb.GetNextLoadMag(HDMagAmmo(hpl.findinventory("AOM_5mm_Mag75")));
 			if(nextmagloaded>=75){
-				sb.drawimage("GMPA2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,scale:(1.5,1.5));
+				sb.drawimage("GMP2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,scale:(1.5,1.5));
 			}else if(nextmagloaded<1){
-				sb.drawimage("GMPA2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,alpha:nextmagloaded?0.6:1.,scale:(1.5,1.5));
+				sb.drawimage("GMP2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,alpha:nextmagloaded?0.6:1.,scale:(1.5,1.5));
 			}else sb.drawbar(
-				"GMPA2","GMPA2",
+				"GMP2","GMP2",
 				nextmagloaded,75,
 				(-46,-3),-1,
 				sb.SHADER_VERT,sb.DI_SCREEN_CENTER_BOTTOM
