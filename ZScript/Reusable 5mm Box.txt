@@ -1,4 +1,4 @@
-const AOM_HDLD_5MMBOX = "5bx" ;
+const AOM_HDLD_5MMBOX = "5bx";
 
 class AOM_5MM_Ammo:HDRoundAmmo{
 	default{

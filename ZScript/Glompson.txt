@@ -20,7 +20,7 @@ Inventory.PickupMessage "You've acquired the Glompson! It feels light in your ha
 hdweapon.barrelsize 26,0.5,1;
 hdweapon.refid AOM_Glompson;
 tag "Glompson";
-inventory.icon "GMP0";
+inventory.icon "GMP1A0";
 }
 	override bool AddSpareWeapon(actor newowner){return AddSpareWeaponRegular(newowner);}
 	override hdweapon GetSpareWeapon(actor newowner,bool reverse,bool doselect){return GetSpareWeaponRegular(newowner,reverse,doselect);}
@@ -71,11 +71,11 @@ inventory.icon "GMP0";
 		if(sb.hudlevel==1){
 			int nextmagloaded=sb.GetNextLoadMag(HDMagAmmo(hpl.findinventory("AOM_5mm_Mag75")));
 			if(nextmagloaded>=75){
-				sb.drawimage("GMP2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,scale:(1.5,1.5));
+				sb.drawimage("GMP2A0",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,scale:(1.5,1.5));
 			}else if(nextmagloaded<1){
-				sb.drawimage("GMP2",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,alpha:nextmagloaded?0.6:1.,scale:(1.5,1.5));
+				sb.drawimage("GMP2A0",(-46,-3),sb.DI_SCREEN_CENTER_BOTTOM,alpha:nextmagloaded?0.6:1.,scale:(1.5,1.5));
 			}else sb.drawbar(
-				"GMP2","GMP2",
+				"GMP2A0","GMP2A0",
 				nextmagloaded,75,
 				(-46,-3),-1,
 				sb.SHADER_VERT,sb.DI_SCREEN_CENTER_BOTTOM
@@ -379,13 +379,13 @@ inventory.icon "GMP0";
 
 	spawn:
 		TNT1 A 1;
-		SMGN A -1{
+		GMP1 A -1{
 			if(invoker.weaponstatus[GMPS_MAG]<0)frame=1;
 			if(
 				invoker.weaponstatus[0]&SMGF_REFLEXSIGHT
-			)invoker.sprite=getspriteindex("GMP0");
+			)invoker.sprite=getspriteindex("GMP1A0"); // [Ace] This does nothing right now because you don't have a reflex sight sprite. GetSpriteIndex is also a bit finicky. Ping me when you actually get to use it so I can explain.
 		}
-		SMSN # -1;
+		GMP1 # -1;
 		stop;
 	}
 	override void initializewepstats(bool idfa){
